@@ -1,0 +1,179 @@
+@media only screen and (max-width: 600px) {
+  .grid {
+    left: 6vw !important;
+    width: 90vw !important;
+    top: 8vh !important;
+  }
+
+  button {
+    left: 5vw !important;
+    width: 90vw !important;
+    top: 20vh !important;
+  }
+
+  #externalContainer, #externalContainer2 {
+    transform: translate(-50%, -20%) !important;
+    /*height: 35rem;
+    width: 35rem;*/
+  }
+}
+#externalContainer2 {
+  right: 50%;
+}
+
+#externalContainer, #externalContainer2 {
+  position: absolute;
+  /*  top: 50%;
+  left: 50%;*/
+  background: transparent;
+  perspective: 20rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*height: 35rem;
+  width: 35rem;*/
+}
+
+#mainContainer, #mainContainer2 {
+  height: 10rem;
+  width: 10rem;
+  border: none;
+  transform-style: preserve-3d;
+  transition-timing-function: ease-in-out;
+  transition: transform 4s;
+}
+
+#mainContainer > *, #mainContainer2 > * {
+  border: solid black 1px;
+  height: 10rem;
+  width: 10rem;
+  text-align: center;
+}
+
+.one {
+  position: absolute;
+  /*  top: 50%;
+  left: 50%;*/
+  background: RGBA(255, 154, 162, 0.6);
+  transform: translate3d(0, 0, 5rem) rotate3d(0, 0, 0, 90deg);
+}
+
+.two {
+  position: absolute;
+  /*  top: 50%;
+  left: 50%;*/
+  background: RGBA(255, 183, 178, 0.6);
+  transform: translate3d(5rem, 0, 0) rotate3d(0, 1, 0, 90deg);
+}
+
+.three {
+  position: absolute;
+  /*  top: 50%;
+  left: 50%;*/
+  background: RGBA(255, 218, 193, 0.6);
+  transform: translate3d(0, 0, -5rem) rotate3d(1, 0, 0, 180deg);
+}
+
+.four {
+  position: absolute;
+  /*  top: 50%;
+  left: 50%;*/
+  background: RGBA(226, 240, 203, 0.6);
+  transform: translate3d(-5rem, 0, 0) rotate3d(0, -1, 0, 90deg);
+}
+
+.five {
+  position: absolute;
+  /*  top: 50%;
+  left: 50%;*/
+  background: RGBA(181, 234, 215, 0.6);
+  transform: translate3d(0, 5rem, 0) rotate3d(1, 0, 0, 90deg);
+}
+
+.six {
+  position: absolute;
+  /*  top: 50%;
+  left: 50%;*/
+  background: RGBA(199, 206, 234, 0.6);
+  transform: translate3d(0, -5rem, 0) rotate3d(2, 0, 0, 90deg);
+}
+
+#img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -3;
+  background-image: url("images/night.jpg");
+  height: 95vh;
+  width: 95vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 50% 50%;
+  align-items: center;
+  position: absolute;
+  left: 6vw;
+  width: 20vw;
+  top: 8vh;
+}
+.grid > * {
+  border-radius: 10px;
+  background-color: white;
+  font-size: 0.5rem;
+  text-align: center;
+}
+
+button {
+  position: absolute;
+  border: solid 1px transparent;
+  font-size: 0.7rem;
+  left: 8vw;
+  width: 16vw;
+  top: 18vh;
+  border-radius: 10px;
+  background-color: #BBE1FA;
+}
+button:hover {
+  box-shadow: 0 0 10px #3282B8;
+  border: solid 1px #3282B8;
+}
+
+input[type=text] {
+  background-color: #BBE1FA;
+  margin: 3px;
+  border: none;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  transform: translate(0, -25%);
+  height: 12px;
+  border-radius: 10px;
+  background: #3282B8;
+  cursor: pointer;
+}
+input::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 10px #3282B8 !important;
+}
+
+input::-webkit-slider-runnable-track {
+  border-radius: 10px;
+  height: 6px;
+  background: #BBE1FA;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */

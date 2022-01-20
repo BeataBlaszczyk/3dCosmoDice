@@ -1,0 +1,177 @@
+@mixin midCen($theme){
+position: absolute;
+  /*  top: 50%;
+  left: 50%;*/
+
+  background: $theme;
+}
+
+$myX: 10rem;
+$mySize: 10rem;
+$myHalf: calc($myX*0.5);
+
+
+@media only screen and (max-width: 600px){
+
+  .grid{
+    left: 6vw!important;
+  width: 90vw!important;
+    top: 8vh!important;
+
+  }
+
+  button{
+
+    left: 5vw!important;
+    width: 90vw!important;
+    top: 20vh!important;
+}
+
+#externalContainer, #externalContainer2{
+
+transform: translate(-50%, -20%)!important;
+/*height: 35rem;
+width: 35rem;*/
+}
+}
+
+#externalContainer2{
+  right: 50%;
+}
+
+#externalContainer, #externalContainer2{
+  @include midCen($theme: transparent );
+  perspective: calc(2*$mySize);
+position: absolute;
+top:50%;
+left: 50%;
+transform: translate(-50%, -50%);
+/*height: 35rem;
+width: 35rem;*/
+}
+
+#mainContainer, #mainContainer2{
+  height: $mySize;
+  width: $mySize;
+border: none;
+
+  transform-style: preserve-3d;
+  transition-timing-function: ease-in-out;
+  transition: transform 4s;
+}
+
+#mainContainer>*, #mainContainer2>*{
+border: solid black 1px;
+  height:$mySize;
+  width: $mySize;
+  text-align: center;
+
+}
+
+.one{
+  @include midCen($theme: RGBA(255, 154, 162, 0.6));
+  transform: translate3d(0,0, $myHalf) rotate3d(0,0,0,90deg) ;//front
+}
+.two{
+  @include midCen($theme: RGBA(255, 183, 178, 0.6));
+  transform: translate3d($myHalf,0, 0) rotate3d(0,1,0,90deg) ;//roght
+}
+.three{
+  @include midCen($theme: RGBA(255, 218, 193, 0.6));
+  transform: translate3d(0,0, -$myHalf) rotate3d(1,0,0,180deg) ;//back
+}
+.four{
+  @include midCen($theme: RGBA(226, 240, 203, 0.6));
+  transform: translate3d(-$myHalf,0, 0) rotate3d(0,-1,0,90deg) ;//left
+}
+.five{
+  @include midCen($theme: RGBA(181, 234, 215, 0.6));
+  transform: translate3d(0,$myHalf, 0) rotate3d(1,0,0,90deg) ;
+}
+.six{
+  @include midCen($theme: RGBA(199, 206, 234, 0.6));
+  transform: translate3d(0,-$myHalf, 0) rotate3d(2,0,0,90deg) ;
+
+
+}
+
+
+#img{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -3;
+  background-image: url("images/night.jpg");
+  height: 95vh;
+  width: 95vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.grid{
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 50% 50%;
+  align-items: center;
+  position: absolute;
+  left: 6vw;
+width: 20vw;
+  top: 8vh;
+  &>*{
+    border-radius: 10px;
+  background-color: white;
+  font-size: 0.5rem;
+  text-align: center;
+  }
+}
+
+button{
+  position: absolute;
+  border: solid 1px transparent;
+  font-size: 0.7rem;
+  left: 8vw;
+  width: 16vw;
+  top: 18vh;
+  border-radius: 10px;
+  background-color: #BBE1FA;
+  &:hover{
+    box-shadow: 0 0 10px #3282B8;
+    border: solid 1px #3282B8;
+  }
+}
+
+input[type="text"]{
+  background-color: #BBE1FA;
+  margin: 3px;
+  border: none;
+}
+input{
+
+    -webkit-appearance: none;
+}
+input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+
+-webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  transform: translate(0, -25%);
+  height:12px;
+  border-radius: 10px;
+  background: #3282B8;
+  cursor: pointer;
+
+&:hover{
+    box-shadow: 0 0 10px #3282B8!important;
+  }
+
+}
+
+input::-webkit-slider-runnable-track {
+  border-radius: 10px;
+  height: 6px;
+  background: #BBE1FA;
+  cursor: pointer;
+}
