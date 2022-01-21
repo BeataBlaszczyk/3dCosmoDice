@@ -6,12 +6,12 @@ position: absolute;
   background: $theme;
 }
 
-$myX: 10rem;
-$mySize: 10rem;
+$myX: 15rem;
+$mySize: 15rem;
 $myHalf: calc($myX*0.5);
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 850px){
 
   .grid{
     left: 6vw!important;
@@ -120,7 +120,7 @@ border: solid black 1px;
 width: 20vw;
   top: 8vh;
   &>*{
-    border-radius: 10px;
+    border-radius: 5vh;
   background-color: white;
   font-size: 0.5rem;
   text-align: center;
@@ -130,11 +130,12 @@ width: 20vw;
 button{
   position: absolute;
   border: solid 1px transparent;
-  font-size: 0.7rem;
-  left: 8vw;
-  width: 16vw;
+  font-size: 2.5vh;
+  left: 10vw;
+  width: 12vw;
+  height: 4vh;
   top: 18vh;
-  border-radius: 10px;
+  border-radius: 5vh;
   background-color: #BBE1FA;
   &:hover{
     box-shadow: 0 0 10px #3282B8;
@@ -144,8 +145,11 @@ button{
 
 input[type="text"]{
   background-color: #BBE1FA;
-  margin: 3px;
+  margin: 0.5vh;
   border: none;
+  border-radius: 5vh;
+  font-size: 2vh;
+  height: 3vh;
 }
 input{
 
@@ -156,10 +160,10 @@ input::-webkit-slider-thumb{
 
 -webkit-appearance: none;
   appearance: none;
-  width: 12px;
+  width: 1vw;
   transform: translate(0, -25%);
-  height:12px;
-  border-radius: 10px;
+  height:3vh;
+  border-radius: 5vh;
   background: #3282B8;
   cursor: pointer;
 
@@ -170,8 +174,8 @@ input::-webkit-slider-thumb{
 }
 
 input::-webkit-slider-runnable-track {
-  border-radius: 10px;
-  height: 6px;
+  border-radius: 5vh;
+  height: 1.5vh;
   background: #BBE1FA;
   cursor: pointer;
 }

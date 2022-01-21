@@ -107,7 +107,7 @@ function myLoop(myX, myXs, i) {         //  create a loop function
     document.querySelector("#myRangeS").value = Math.round(2*i* 10) / 10;
     document.querySelector("#sValue").value = Math.round(2*i* 10) / 10;  //  your code here
 
-if (myXs<=myX){
+if (myXs<myX){
   i+=(-(myXs-myX)/650);                    //  increment the counter
   if (i <= myX) {           //  if the counter < 10, call the loop function
     myLoop(myX, myXs, i);             //  ..  again which will trigger another
@@ -115,7 +115,7 @@ if (myXs<=myX){
     document.querySelector("#myRangeS").value = 2*myX;
     document.querySelector("#sValue").value = 2*myX;
   }
-}else{
+}else if (myXs>myX) {
   i+=(-(myXs-myX)/650);                    //  increment the counter
   if (i >= myX) {           //  if the counter < 10, call the loop function
     myLoop(myX, myXs, i);             //  ..  again which will trigger another
@@ -123,6 +123,9 @@ if (myXs<=myX){
     document.querySelector("#myRangeS").value = 2*myX;
     document.querySelector("#sValue").value = 2*myX;
   }
+}else{
+  document.querySelector("#myRangeS").value = 2*myX;
+  document.querySelector("#sValue").value = 2*myX;
 }
 
                               //  ..  setTimeout()

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 850px) {
   .grid {
     left: 6vw !important;
     width: 90vw !important;
@@ -26,7 +26,7 @@
   /*  top: 50%;
   left: 50%;*/
   background: transparent;
-  perspective: 20rem;
+  perspective: 30rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -36,8 +36,8 @@
 }
 
 #mainContainer, #mainContainer2 {
-  height: 10rem;
-  width: 10rem;
+  height: 15rem;
+  width: 15rem;
   border: none;
   transform-style: preserve-3d;
   transition-timing-function: ease-in-out;
@@ -46,8 +46,8 @@
 
 #mainContainer > *, #mainContainer2 > * {
   border: solid black 1px;
-  height: 10rem;
-  width: 10rem;
+  height: 15rem;
+  width: 15rem;
   text-align: center;
 }
 
@@ -56,7 +56,7 @@
   /*  top: 50%;
   left: 50%;*/
   background: RGBA(255, 154, 162, 0.6);
-  transform: translate3d(0, 0, 5rem) rotate3d(0, 0, 0, 90deg);
+  transform: translate3d(0, 0, 7.5rem) rotate3d(0, 0, 0, 90deg);
 }
 
 .two {
@@ -64,7 +64,7 @@
   /*  top: 50%;
   left: 50%;*/
   background: RGBA(255, 183, 178, 0.6);
-  transform: translate3d(5rem, 0, 0) rotate3d(0, 1, 0, 90deg);
+  transform: translate3d(7.5rem, 0, 0) rotate3d(0, 1, 0, 90deg);
 }
 
 .three {
@@ -72,7 +72,7 @@
   /*  top: 50%;
   left: 50%;*/
   background: RGBA(255, 218, 193, 0.6);
-  transform: translate3d(0, 0, -5rem) rotate3d(1, 0, 0, 180deg);
+  transform: translate3d(0, 0, -7.5rem) rotate3d(1, 0, 0, 180deg);
 }
 
 .four {
@@ -80,7 +80,7 @@
   /*  top: 50%;
   left: 50%;*/
   background: RGBA(226, 240, 203, 0.6);
-  transform: translate3d(-5rem, 0, 0) rotate3d(0, -1, 0, 90deg);
+  transform: translate3d(-7.5rem, 0, 0) rotate3d(0, -1, 0, 90deg);
 }
 
 .five {
@@ -88,7 +88,7 @@
   /*  top: 50%;
   left: 50%;*/
   background: RGBA(181, 234, 215, 0.6);
-  transform: translate3d(0, 5rem, 0) rotate3d(1, 0, 0, 90deg);
+  transform: translate3d(0, 7.5rem, 0) rotate3d(1, 0, 0, 90deg);
 }
 
 .six {
@@ -96,7 +96,7 @@
   /*  top: 50%;
   left: 50%;*/
   background: RGBA(199, 206, 234, 0.6);
-  transform: translate3d(0, -5rem, 0) rotate3d(2, 0, 0, 90deg);
+  transform: translate3d(0, -7.5rem, 0) rotate3d(2, 0, 0, 90deg);
 }
 
 #img {
@@ -123,7 +123,7 @@
   top: 8vh;
 }
 .grid > * {
-  border-radius: 10px;
+  border-radius: 5vh;
   background-color: white;
   font-size: 0.5rem;
   text-align: center;
@@ -132,11 +132,12 @@
 button {
   position: absolute;
   border: solid 1px transparent;
-  font-size: 0.7rem;
-  left: 8vw;
-  width: 16vw;
+  font-size: 2.5vh;
+  left: 10vw;
+  width: 12vw;
+  height: 4vh;
   top: 18vh;
-  border-radius: 10px;
+  border-radius: 5vh;
   background-color: #BBE1FA;
 }
 button:hover {
@@ -146,8 +147,11 @@ button:hover {
 
 input[type=text] {
   background-color: #BBE1FA;
-  margin: 3px;
+  margin: 0.5vh;
   border: none;
+  border-radius: 5vh;
+  font-size: 2vh;
+  height: 3vh;
 }
 
 input {
@@ -158,10 +162,10 @@ input::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  width: 12px;
+  width: 1vw;
   transform: translate(0, -25%);
-  height: 12px;
-  border-radius: 10px;
+  height: 3vh;
+  border-radius: 5vh;
   background: #3282B8;
   cursor: pointer;
 }
@@ -170,8 +174,8 @@ input::-webkit-slider-thumb:hover {
 }
 
 input::-webkit-slider-runnable-track {
-  border-radius: 10px;
-  height: 6px;
+  border-radius: 5vh;
+  height: 1.5vh;
   background: #BBE1FA;
   cursor: pointer;
 }
